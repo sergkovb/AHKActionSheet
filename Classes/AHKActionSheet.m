@@ -65,8 +65,8 @@ static const CGFloat kCancelButtonShadowHeightRatio = 0.333f;
     [appearance setBlurRadius:16.0f];
     [appearance setBlurTintColor:[UIColor colorWithWhite:1.0f alpha:0.5f]];
     [appearance setBlurSaturationDeltaFactor:1.8f];
-    [appearance setButtonHeight:60.0f];
-    [appearance setCancelButtonHeight:44.0f];
+    [appearance setButtonHeight:65.0f];
+    [appearance setCancelButtonHeight:65.0f];
     [appearance setAutomaticallyTintButtonImages:@YES];
     [appearance setSelectedBackgroundColor:[UIColor colorWithWhite:0.1f alpha:0.2f]];
     [appearance setCancelButtonTextAttributes:@{ NSFontAttributeName : [UIFont systemFontOfSize:17.0f],
@@ -139,6 +139,7 @@ static const CGFloat kCancelButtonShadowHeightRatio = 0.333f;
     }
 
     NSAttributedString *attrTitle = [[NSAttributedString alloc] initWithString:item.title attributes:attributes];
+    cell.textLabel.numberOfLines = 3;
     cell.textLabel.attributedText = attrTitle;
     cell.textLabel.textAlignment = [self.buttonTextCenteringEnabled boolValue] ? NSTextAlignmentCenter : NSTextAlignmentLeft;
 
